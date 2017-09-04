@@ -1,4 +1,4 @@
-function local(name) {
+function localScope(name) {
 	return (
 		"for (var key in " + name + ") {" +
 			"eval(" +
@@ -7,3 +7,5 @@ function local(name) {
 		"}"
 	);
 }
+
+module.exports = localScope;
