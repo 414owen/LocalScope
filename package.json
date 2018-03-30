@@ -1,6 +1,6 @@
 {
   "name": "localscope",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add all of an object's values to the local scope, with the variable names of their keys",
   "main": "local.js",
   "scripts": {
