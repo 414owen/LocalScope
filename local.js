@@ -1,11 +1,9 @@
-function localScope(name) {
-	return (
-		"for (var key in " + name + ") {" +
-			"eval(" +
-				"'var ' + key + ' = " + name + "[\"' + key + '\"]'" +
-			");" +
-		"}"
-	);
+function localScope(obj) {
+	let decls = '';
+	for (let key in obj) {
+		decls = 'var ' + key + ' = ' + JSON.stringify(obj[key]) + ';\n';
+	}
+	return decls;
 }
 
 module.exports = localScope;
