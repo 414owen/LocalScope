@@ -13,8 +13,6 @@ describe('Local.js', function() {
 			assert.ok(a,'Didn\'t instantiate');
 			assert.ok((typeof a) === k, 'Instantiated with wrong type');
 			assert.ok(JSON.stringify(a) === JSON.stringify(addables[k]), 'Instantiated with wrong value');
-
-
 		});
 	}
 });
