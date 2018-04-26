@@ -1,7 +1,7 @@
-function localScope(obj) {
-	let decls = '';
+function localScope(obj,ident) {
+	var decls = '';
 	for (let key in obj) {
-		decls = 'var ' + key + ' = ' + JSON.stringify(obj[key]) + ';\n';
+		decls += 'var ' + key + ' = ' + ident + '.' + key + ';\n';
 	}
 	return decls;
 }
