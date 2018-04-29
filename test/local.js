@@ -9,8 +9,8 @@ describe('Local.js', function() {
 	});
 	for (let k in addables) {
 		it('Should add ' + k + 's',function() {
-			let test_vals = {a:addables[k]};
-			eval(loc(test_vals,'test_vals'));
+			var test_vals = {a:addables[k]};
+			console.log(loc('test_vals'));
 			assert.ok(a,'Didn\'t instantiate');
 			assert.ok((typeof a) === k, 'Instantiated with wrong type');
 			assert.ok(JSON.stringify(a) === JSON.stringify(addables[k]), 'Instantiated with wrong value');
@@ -22,7 +22,7 @@ describe('Local.js', function() {
 				return 123987;
 			}
 		};
-		eval(loc(obj,'obj'));
+		eval(loc('obj'));
 		assert.ok(func,'Didn\'t instantiate');
 		assert.ok((typeof func) === 'function', 'Instantiated with wrong type');
 		assert.ok(func() == 123987, 'Function call works');

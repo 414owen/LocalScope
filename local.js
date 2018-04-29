@@ -1,9 +1,12 @@
-function localScope(obj,ident) {
-	var decls = '';
-	for (let key in obj) {
-		decls += 'var ' + key + ' = ' + ident + '.' + key + ';\n';
-	}
-	return decls;
-}
+module.exports = function(name) {
+	return (
+		"eval(" +
+			"Object.keys(" + name + ").map(" +
+				"function(key) {" +
+					"return 'var ' + key + ' = " + name + "[\"' + key + '\"];'" +
+				"}" +
+			").join('')" +
+		")"
+	);
+};
 
-module.exports = localScope;
