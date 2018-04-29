@@ -10,7 +10,7 @@ describe('Local.js', function() {
 	for (let k in addables) {
 		it('Should add ' + k + 's',function() {
 			var test_vals = {a:addables[k]};
-			console.log(loc('test_vals'));
+			eval(loc('test_vals'));
 			assert.ok(a,'Didn\'t instantiate');
 			assert.ok((typeof a) === k, 'Instantiated with wrong type');
 			assert.ok(JSON.stringify(a) === JSON.stringify(addables[k]), 'Instantiated with wrong value');
