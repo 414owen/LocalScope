@@ -1,11 +1,12 @@
-function localScope(name) {
+module.exports = function(name) {
 	return (
-		"for (var key in " + name + ") {" +
-			"eval(" +
-				"'var ' + key + ' = " + name + "[\"' + key + '\"]'" +
-			");" +
-		"}"
+		"eval(" +
+			"Object.keys(" + name + ").map(" +
+				"function(key) {" +
+					"return 'var ' + key + ' = " + name + "[\"' + key + '\"];'" +
+				"}" +
+			").join('')" +
+		")"
 	);
-}
+};
 
-module.exports = localScope;
