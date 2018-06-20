@@ -8,7 +8,7 @@ I wrote a blog post explaining the reasoning behind this and how it works
 Here is a good example of how to use this code:
 
 ```
-var local = require("localScope");
+var local = require("localscope");
 
 let obj = {
 	a: "Hello,",
