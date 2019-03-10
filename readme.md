@@ -25,4 +25,4 @@ function testImport() {
 testImport();
 ```
 
-**PLEASE DO NOT USE THIS**. There's [a JavaScript construct](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with) to do this already, albeit with indentation, and I really recomment not using that either. The more dynamic your code is, the less the VM will be able to optimise it.
+**PLEASE DO NOT USE THIS**. There's [a JavaScript construct](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with) to do this already, albeit with indentation, and I really recommend not using that either. The more dynamic your code is, the less the VM will be able to optimise it.
